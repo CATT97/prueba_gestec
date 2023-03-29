@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+    @if ($libro->Disponible == true)
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8">
@@ -82,4 +83,10 @@
             </div>
         </div>
     </div>
+    @else
+    <div>
+        <h1 class="text-center">El libro no esta disponible</h1>
+    </div>
+    @endif
+
 @endsection
